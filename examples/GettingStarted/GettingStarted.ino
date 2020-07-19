@@ -6,22 +6,18 @@
 
 #include <RadioengeLoraMesh.h> //Inclusão da biblioteca
 
-
 /* 
-    Aqui é apresentado a inicialização da RadioengeLib,
-    o comando de leitura local, que retorna as informações do módulo
-    e liga/desliga o led por 1 segundo.
-
-    Pinos de comunicação UART da porta de comandos
-    
+    Exemplo de uso  da RadioengeLib.
+    * Comando de leitura local, 
+    * Leitura dos parâmetros de modulação
+    * Configuração e uso de pinos de GPIO
+   
     No exemplo a seguir:
-    - ligar o pino RX (pino 2) do módulo na porta digital 6 do arduino
-    - ligar o pino TX (pino 2) do módulo na porta digital 7 do arduino
-
-    Conectar um led no pino GPIO 0 do módulo.
-
-    
+    - Conectar o pino RX (pino 2) do módulo na porta digital 6 do arduino
+    - Conectar o pino TX (pino 2) do módulo na porta digital 7 do arduino
+    - Conectar um led no pino GPIO 0 do módulo. 
  */
+
 #define RADIO_RX_PIN 6
 #define RADIO_TX_PIN 7
 
