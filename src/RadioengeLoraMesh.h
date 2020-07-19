@@ -50,8 +50,9 @@ class RadioengeLoraMesh
 #endif
 
         /**
-         * Synchronous functions:
-         * It sends and waits for response.
+         * Async functions:
+         * It checks if parameters are valid 
+         * and sends the command
          * In case of success it returns RADIO_OK,
          * otherwise it returns the code of error.
         */
