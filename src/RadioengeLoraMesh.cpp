@@ -473,10 +473,10 @@ uint16_t RadioengeLoraMesh::readPacket(uint8_t buffer[])
 uint16_t RadioengeLoraMesh::readMessage(uint8_t buffer[], uint8_t &command, uint16_t &dst)
 {
     int ret = 0;
-	if(packet.size < 5)
-	{
-		return 0;
-	}
+    if(packet.size < 5)
+    {
+        return 0;
+    }
     ret = packet.size - 5;
     command = packet.data[RADIO_CMD_POS];
     dst = (packet.data[RADIO_ID_MSB_POS] & 0xFFF);
