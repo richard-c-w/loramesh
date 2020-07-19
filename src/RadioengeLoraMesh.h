@@ -30,12 +30,12 @@ class RadioengeLoraMesh
         void begin(); // Serial initialization
         uint8_t available(); //Data available for processing
 
-		/**
-		 * Synchronous functions:
-		 * It sends and waits for response.
-		 * In case of success it returns RADIO_OK,
-		 * otherwise it returns the code of error.
-		*/
+        /**
+         * Synchronous functions:
+         * It sends and waits for response.
+         * In case of success it returns RADIO_OK,
+         * otherwise it returns the code of error.
+        */
 #ifdef RADIO_SYNC_FUNCTIONS
         void setResponseTimeout(uint32_t millis); //Timeout for sync responses        
         radio_result_t localRead(device_t* device);
@@ -43,18 +43,18 @@ class RadioengeLoraMesh
         radio_result_t writeConfig(device_t* device);
         radio_result_t setPassword(uint16_t id, uint32_t* password);
         radio_result_t getModulation(uint16_t id, mod_param_t* modulation);
-		radio_result_t pinMode(uint16_t id, uint8_t pin, uint8_t mode, uint8_t pull);
+        radio_result_t pinMode(uint16_t id, uint8_t pin, uint8_t mode, uint8_t pull);
         radio_result_t digitalWrite(uint16_t id, uint8_t pin, uint8_t value);   
         int8_t digitalRead(uint16_t id, uint8_t pin);
         uint16_t analogRead(uint16_t id, uint8_t pin);    
 #endif
 
-		/**
-		 * Synchronous functions:
-		 * It sends and waits for response.
-		 * In case of success it returns RADIO_OK,
-		 * otherwise it returns the code of error.
-		*/
+        /**
+         * Synchronous functions:
+         * It sends and waits for response.
+         * In case of success it returns RADIO_OK,
+         * otherwise it returns the code of error.
+        */
         radio_result_t localReadAsync();
         radio_result_t writeConfigAsync(device_t* device);
         radio_result_t setPasswordAsync(uint16_t id, uint32_t* password);
@@ -75,14 +75,14 @@ class RadioengeLoraMesh
         uint8_t _rxPin;
         uint8_t _txPin;
         uint32_t _baudRate;
-		uint32_t _timeout;
+        uint32_t _timeout;
 
         SerialPort* uartComandos;
 
         packet_t packet;
         
         void mountReadPacket(device_t* device);
-		radio_result_t checkPacketIntegrity();
+        radio_result_t checkPacketIntegrity();
 };
 
 #endif
